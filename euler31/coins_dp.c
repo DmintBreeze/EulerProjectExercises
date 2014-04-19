@@ -1,6 +1,6 @@
 /* 
  * coins_recursive.c
- * solve problem of week16 with Dynamic Programming
+ * solve problem of euler31 with Dynamic Programming
  * @author: mintBreeze
  */
 
