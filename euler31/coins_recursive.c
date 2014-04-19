@@ -1,6 +1,6 @@
 /* 
  * coins_recursive.c
- * solve problem of week16 recursively
+ * solve problem of euler31 recursively
  * @author: mintBreeze
  */
 

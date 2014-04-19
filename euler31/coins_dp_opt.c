@@ -1,6 +1,6 @@
 /* 
- * coins_recursive.c
- * solve problem of week16 with DP optimized space consumption
+ * coins_dp_opt.c
+ * solve problem of euler31 with DP optimized space consumption
  * @author: mintBreeze
  */
 
