@@ -13,7 +13,7 @@ int main() {
     for (int i = 0; i < size; i++) {
         paths *= (2 * size) - i;
         /* paths is assured integer
-         * as it is C(i, 2n)
+         * as it is C(2n, i)
          */
         paths /= i + 1;  
     }
