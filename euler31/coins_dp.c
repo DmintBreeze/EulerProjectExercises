@@ -1,5 +1,5 @@
 /* 
- * coins_recursive.c
+ * coins_dp.c
  * solve problem of euler31 with Dynamic Programming
  * @author: mintBreeze
  */
