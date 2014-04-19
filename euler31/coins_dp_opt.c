@@ -1,5 +1,5 @@
 /* 
- * coins_recursive.c
+ * coins_coins_dp_opt.c
  * solve problem of euler31 with DP optimized space consumption
  * @author: mintBreeze
  */
