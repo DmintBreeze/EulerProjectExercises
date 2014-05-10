@@ -8,6 +8,12 @@
 #include <stdlib.h>
 #include <math.h>
 
+#ifdef DEBUG
+#define dbg_print(x) printf x
+#else
+#define dbg_print(x) do {} while (0)
+#endif
+
 long double calc_paths(int);
 
 int main() 
