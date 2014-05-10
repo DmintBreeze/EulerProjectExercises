@@ -1,6 +1,6 @@
 /*
  * euler351_euler_bruteforce.c
- * solve problem of euler351 with stem gcd
+ * solve problem of euler351 with bruteforce euler function
  * note: this solution is costful,
  *       but much faster than euler351_gcd.c
  *       result is somewhat tolerable,
