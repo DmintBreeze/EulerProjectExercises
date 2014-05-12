@@ -10,17 +10,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <time.h>
 
-long euler(long);
+int euler(int);
 
 int main(){
-  const unsigned long long size = 100000000;
-  unsigned long long sum = 0;
+  clock_t start, end;
+  const long size = 100000000;
+  long sum = 0;
+  start = clock();
   for(int i = 1; i< size; ++i){
     sum += (size/i - 1)*euler(i)*6;
   }
-  printf("Total number of points is %llu\n", sum);
+  end = clock();
+
+  printf("Total number of points is %ld,\n", sum);
+  printf("Elasped time: %10.3f seconds.\n", (end-start)*0.1/CLOCKS_PER_SEC );
   return EXIT_SUCCESS;
 }
 
@@ -32,10 +37,10 @@ int main(){
  * i.e. find result of euler function of a given number.
  *
  */
-long euler(long input){
-  long rational = input;
-  long count = rational;
-  for(int i = 2; i < (int)sqrt(rational*1.0)+1; ++i){
+int euler(int input){
+  int rational = input;
+  int count = rational;
+  for(int i = 2; i*i < rational+1; ++i){
     if(rational%i == 0){
       /* deduct all possible count of this factor */
       count = count/i * (i - 1);
