@@ -25,7 +25,7 @@ int main(){
   end = clock();
 
   printf("Total number of points is %ld,\n", sum);
-  printf("Elasped time: %10.3f seconds.\n", (end-start)*0.1/CLOCKS_PER_SEC );
+  printf("Elasped time: %10.3f seconds.\n", (end-start)*1.0/CLOCKS_PER_SEC );
   return EXIT_SUCCESS;
 }
 
