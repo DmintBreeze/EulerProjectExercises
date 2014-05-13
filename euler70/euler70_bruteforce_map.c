@@ -40,10 +40,7 @@ int main()
 
 /*
  * Function: euler
- * Get number of lines start from center and
- * are composed by points on edges of concentric hexagons.
- * i.e. find result of euler function of a given number.
- *
+ * returns: result of euler function of a given number.
  */
 int euler(int input)
 {
