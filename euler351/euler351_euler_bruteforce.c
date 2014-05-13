@@ -20,8 +20,9 @@ int main(){
   long sum = 0;
   start = clock();
   for(int i = 1; i< size; ++i){
-    sum += (size/i - 1)*euler(i)*6;
+    sum += (size/i - 1)*euler(i);
   }
+  sum *= 6;
   end = clock();
 
   printf("Total number of points is %ld,\n", sum);
