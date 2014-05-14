@@ -36,23 +36,29 @@ int main(){
  * Get number of lines start from center and
  * are composed by points on edges of concentric hexagons.
  * i.e. find result of euler function of a given number.
- *
+ * Implementation by prim factor sieving and euler's totient function
+ * returns: phi(input)
  */
 int euler(int input){
   int rational = input;
   int count = rational;
+  /*
+   * In the below loop, i*i < rational+1 is set
+   * because, the end condition is, i is the last possible prim factor
+   * in other words, there is no more prim factor greater than i.
+   */
   for(int i = 2; i*i < rational+1; ++i){
-    if(rational%i == 0){
-      /* deduct all possible count of this factor */
+    if(rational%i == 0) /* i must be prim to enter */
+    {
       count = count/i * (i - 1);
-      /* eliminate this factor */
+      /* sieve multiples of this factor */
       while(rational % i == 0){
         rational/=i;
       }
     }
   }
   if(rational > 1){
-    /* rational now is a prim number, the last factor of input */
+    /* rational now is the last prim factor of input */
     count = count/rational * (rational -1);
   }
   return count;
