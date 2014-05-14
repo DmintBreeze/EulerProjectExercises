@@ -19,7 +19,7 @@ int main(){
   const long size = 100000000;
   long sum = 0;
   start = clock();
-  for(int i = 1; i< size; ++i){
+  for(int i = 1; i< (size/2 + 1); ++i){
     sum += (size/i - 1)*euler(i);
   }
   sum *= 6;

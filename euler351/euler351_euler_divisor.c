@@ -12,7 +12,8 @@
 #include <time.h>
 
 /* macro must be used for Mac OS X */
-#define SIZE (100000000)
+#define SIZE_N (100000000)
+#define SIZE (50000001)
 int euler[SIZE];
 
 int main(){
@@ -24,7 +25,7 @@ int main(){
     euler[i] = i;
   }
   for(int i = 1; i < SIZE; ++i){
-    sum += (SIZE/i - 1)*euler[i];
+    sum += (SIZE_N/i - 1)*euler[i];
     /*
      * Euler divisor sum:
      * n = sum of euler(d) for d in divisors of n
